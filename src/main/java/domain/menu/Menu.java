@@ -1,4 +1,4 @@
-package domain;
+package domain.order;
 
 public class Menu {
     private final int number;

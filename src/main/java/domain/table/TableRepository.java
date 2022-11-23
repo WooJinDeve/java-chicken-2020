@@ -1,4 +1,4 @@
-package domain;
+package domain.order;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,5 +18,10 @@ public class TableRepository {
 
     public static List<Table> tables() {
         return Collections.unmodifiableList(tables);
+    }
+
+    public static Table findById(Long id){
+        tables().stream()
+                .filter(table -> table.)
     }
 }
