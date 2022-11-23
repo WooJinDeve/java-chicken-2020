@@ -1,7 +1,7 @@
 package view;
 
-import domain.Menu;
-import domain.Table;
+import domain.menu.Menu;
+import domain.table.Table;
 
 import java.util.List;
 
@@ -36,5 +36,10 @@ public class OutputView {
             System.out.printf(TABLE_FORMAT, table);
         }
         System.out.println();
+    }
+
+
+    public static void printTotalPayment(final double price) {
+        System.out.println(price);
     }
 }

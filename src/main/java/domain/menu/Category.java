@@ -1,4 +1,4 @@
-package domain.order;
+package domain.menu;
 
 public enum Category {
     CHICKEN("치킨"),

@@ -1,4 +1,4 @@
-package domain.order;
+package domain.table;
 
 public class Table {
     private final int number;
@@ -12,7 +12,7 @@ public class Table {
         return Integer.toString(number);
     }
 
-    public void hasNumber(final int number){
-        return number
+    public boolean hasNumber(final int number){
+        return this.number == number;
     }
 }

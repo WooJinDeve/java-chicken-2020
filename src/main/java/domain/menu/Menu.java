@@ -1,4 +1,6 @@
-package domain.order;
+package domain.menu;
+
+import java.util.Objects;
 
 public class Menu {
     private final int number;
@@ -16,5 +18,34 @@ public class Menu {
     @Override
     public String toString() {
         return category + " " + number + " - " + name + " : " + price + "원";
+    }
+
+    public boolean hasNumber(int number){
+        return this.number == number;
+    }
+
+    public boolean hasCategory(Category category){
+        return this.category.equals(category);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Menu)) return false;
+        Menu menu = (Menu) o;
+        return Objects.equals(number, menu.number);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number);
     }
 }

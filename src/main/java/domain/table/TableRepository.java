@@ -1,4 +1,6 @@
-package domain.order;
+package domain.table;
+
+import view.OutputView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,8 +22,10 @@ public class TableRepository {
         return Collections.unmodifiableList(tables);
     }
 
-    public static Table findById(Long id){
-        tables().stream()
-                .filter(table -> table.)
+    public static Table findByTableNumber(final int tableNumber){
+        return tables().stream()
+                .filter(table -> table.hasNumber(tableNumber))
+                .findFirst()
+                .orElseThrow(RuntimeException::new);
     }
 }

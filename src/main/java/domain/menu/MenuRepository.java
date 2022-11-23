@@ -1,4 +1,4 @@
-package domain.order;
+package domain.menu;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,5 +20,12 @@ public class MenuRepository {
 
     public static List<Menu> menus() {
         return Collections.unmodifiableList(menus);
+    }
+
+    public static Menu findByMenuNumber(int menuNumber){
+        return menus().stream()
+                .filter(menu -> menu.hasNumber(menuNumber))
+                .findFirst()
+                .orElseThrow(RuntimeException::new);
     }
 }
